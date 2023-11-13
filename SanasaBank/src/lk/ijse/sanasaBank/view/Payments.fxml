@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.PaymentsController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Payments.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="215.0" layoutY="105.0" onAction="#memberOnAction" prefHeight="167.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="272.0" onAction="#accountsOnAction" prefHeight="167.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="445.0" onAction="#loanOnAction" prefHeight="167.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="612.0" onAction="#paymentsOnAction" prefHeight="167.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="786.0" onAction="#reportsOnAction" prefHeight="167.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="586.0" layoutY="105.0" onAction="#payOnAction1" prefHeight="80.0" prefWidth="159.0" text="  " />
+      <JFXButton layoutX="1480.0" layoutY="212.0" onAction="#transactionOnAction" prefHeight="167.0" prefWidth="265.0" text="  " />
+      <Label fx:id="lblAdminName" layoutX="1606.0" layoutY="494.0" prefHeight="35.0" prefWidth="118.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1669.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1667.0" layoutY="145.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="52.0" text="  " />
+      <Label layoutX="627.0" layoutY="212.0" prefHeight="30.0" prefWidth="165.0" text="Select Loan ID" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbmLoanId" layoutX="627.0" layoutY="257.0" onAction="#cbmSetLoanDetail" prefHeight="25.0" prefWidth="146.0" promptText="Select Loan ID" />
+      <Label layoutX="628.0" layoutY="312.0" prefHeight="30.0" prefWidth="165.0" text="Loan Detail" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="627.0" layoutY="366.0" prefHeight="27.0" prefWidth="179.0" text="Account ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="898.0" layoutY="366.0" prefHeight="27.0" prefWidth="179.0" text="Amount">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1124.0" layoutY="366.0" prefHeight="27.0" prefWidth="179.0" text="Interest">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="621.0" layoutY="481.0" prefHeight="27.0" prefWidth="179.0" text="Total">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="886.0" layoutY="481.0" prefHeight="27.0" prefWidth="179.0" text="Remain Amount">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblActId" layoutX="628.0" layoutY="422.0" prefHeight="17.0" prefWidth="91.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmount" layoutX="898.0" layoutY="422.0" prefHeight="17.0" prefWidth="91.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInterest" layoutX="1124.0" layoutY="422.0" prefHeight="17.0" prefWidth="91.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTot" layoutX="620.0" layoutY="524.0" prefHeight="17.0" prefWidth="91.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRemainAmount" layoutX="886.0" layoutY="524.0" prefHeight="21.0" prefWidth="118.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="627.0" layoutY="561.0" prefHeight="30.0" prefWidth="165.0" text="Payment" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPayID" layoutX="626.0" layoutY="661.0" />
+      <Label layoutX="624.0" layoutY="613.0" prefHeight="27.0" prefWidth="179.0" text="Payment ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="907.0" layoutY="660.0" />
+      <Label layoutX="905.0" layoutY="612.0" prefHeight="27.0" prefWidth="179.0" text="Amount">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1122.0" layoutY="476.0" prefHeight="27.0" prefWidth="179.0" text="Monthly Instament">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRemainAmount1" layoutX="1122.0" layoutY="519.0" prefHeight="21.0" prefWidth="118.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbnCash" layoutX="629.0" layoutY="727.0" mnemonicParsing="false" selected="true" text="Cash">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="payMethod" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbnOnline" layoutX="827.0" layoutY="727.0" mnemonicParsing="false" text="Online" toggleGroup="$payMethod">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rbnCheque" layoutX="1006.0" layoutY="727.0" mnemonicParsing="false" text="Cheque" toggleGroup="$payMethod">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="612.0" layoutY="779.0" prefHeight="30.0" prefWidth="165.0" text="Cheque Detail" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1203.0" layoutY="841.0" onAction="#payOnAction" prefHeight="36.0" prefWidth="137.0" style="-fx-background-color: #155cc7;" text="Pay" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtChequeNum" layoutX="625.0" layoutY="881.0" />
+      <Label layoutX="623.0" layoutY="833.0" prefHeight="27.0" prefWidth="179.0" text="Cheque Num">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" layoutX="906.0" layoutY="881.0" />
+      <Label layoutX="904.0" layoutY="833.0" prefHeight="27.0" prefWidth="179.0" text="Date">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmount2" alignment="CENTER_RIGHT" layoutX="906.0" layoutY="696.0" prefHeight="19.0" prefWidth="159.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblChequeNum" alignment="CENTER_RIGHT" layoutX="621.0" layoutY="916.0" prefHeight="19.0" prefWidth="159.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

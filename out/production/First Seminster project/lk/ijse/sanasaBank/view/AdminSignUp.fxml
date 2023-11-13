@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.AdminSignUpController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/den%20hari%20yko.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="985.0" layoutY="162.0" prefHeight="99.0" prefWidth="370.0" text="Admin Sign Up Form" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUserName" alignment="TOP_CENTER" layoutX="985.0" layoutY="407.0" onKeyTyped="#userNameKeyTypedOnAction" prefHeight="25.0" prefWidth="339.0" text="User Name" />
+      <JFXTextField fx:id="txtPassword" alignment="TOP_CENTER" layoutX="985.0" layoutY="571.0" onKeyTyped="#passwordKeytypedOnAction" prefHeight="25.0" prefWidth="339.0" text="Password" />
+      <TextField fx:id="txtAdminCode" alignment="TOP_CENTER" layoutX="1057.0" layoutY="686.0" prefHeight="25.0" prefWidth="196.0" text="Enter Admin Code" />
+      <JFXButton layoutX="1051.0" layoutY="831.0" onAction="#signUpOnAction" prefHeight="37.0" prefWidth="238.0" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#d30000" />
+                  <Stop color="#2200ff" offset="0.007662835249042145" />
+                  <Stop color="#2200ff" offset="0.21578386064699606" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton layoutX="1345.0" layoutY="835.0" onAction="#backOnAction" prefHeight="25.0" prefWidth="87.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <Label fx:id="lblAdminCode" layoutX="1057.0" layoutY="720.0" prefHeight="17.0" prefWidth="152.0" textFill="#ff0909" />
+      <Label fx:id="lblUserName" layoutX="985.0" layoutY="455.0" prefHeight="17.0" prefWidth="196.0" textFill="#ff0909" />
+      <Label fx:id="lblPassword" layoutX="985.0" layoutY="616.0" prefHeight="17.0" prefWidth="196.0" textFill="#ff0909" />
+   </children>
+</AnchorPane>

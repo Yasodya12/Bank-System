@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.DepositeMoneyController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Transaction%20Deposite.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="213.0" layoutY="106.0" onAction="#memberOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="273.0" onAction="#accountsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="447.0" onAction="#loanOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="614.0" onAction="#paymentsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="781.0" onAction="#reportsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="584.0" layoutY="106.0" onAction="#depositeOnAction" prefHeight="82.0" prefWidth="161.0" text="  " />
+      <JFXButton layoutX="745.0" layoutY="106.0" onAction="#withdrawOnAction" prefHeight="82.0" prefWidth="161.0" text="  " />
+      <JFXButton layoutX="1482.0" layoutY="211.0" onAction="#transactionOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <Label fx:id="lblAdminName" layoutX="1581.0" layoutY="487.0" prefHeight="44.0" prefWidth="155.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1671.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1669.0" layoutY="147.0" onAction="#homeOnAction" prefHeight="44.0" prefWidth="52.0" text="  " />
+      <Label layoutX="616.0" layoutY="277.0" prefHeight="27.0" prefWidth="130.0" text="Transaction ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTransId" layoutX="616.0" layoutY="316.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="txtActId" layoutX="616.0" layoutY="458.0" onAction="#searchAccountOnAction" prefHeight="25.0" prefWidth="99.0" />
+      <Label layoutX="616.0" layoutY="411.0" prefHeight="27.0" prefWidth="130.0" text="Account ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="615.0" layoutY="363.0" prefHeight="30.0" prefWidth="205.0" text="Search By Account ID" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="927.0" layoutY="211.0" prefHeight="30.0" prefWidth="205.0" text="Deposite Money" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="924.0" layoutY="277.0" prefHeight="27.0" prefWidth="211.0" text="Account Owner Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtActOwnerName" layoutX="931.0" layoutY="315.0" prefHeight="27.0" prefWidth="192.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="933.0" layoutY="403.0" prefHeight="27.0" prefWidth="192.0" text="Account Type ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtActOwnerName1" layoutX="929.0" layoutY="451.0" prefHeight="27.0" prefWidth="181.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDepositeName" layoutX="935.0" layoutY="566.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="935.0" layoutY="519.0" prefHeight="27.0" prefWidth="181.0" text="Depositer Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDepositeAmount" layoutX="933.0" layoutY="673.0" prefHeight="25.0" prefWidth="155.0" />
+      <Label layoutX="933.0" layoutY="626.0" prefHeight="27.0" prefWidth="181.0" text="Deposite Amount">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" layoutX="1224.0" layoutY="566.0" prefHeight="25.0" prefWidth="155.0" />
+      <Label layoutX="1230.0" layoutY="519.0" prefHeight="27.0" prefWidth="181.0" text="Date">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="944.0" layoutY="865.0" onAction="#txtDepositeOnAction" prefHeight="44.0" prefWidth="192.0" style="-fx-background-color: #155cc7;" text="Deposite Money" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbTransactionType" layoutX="944.0" layoutY="756.0" prefHeight="25.0" prefWidth="155.0" promptText="Payment Type" />
+      <Label fx:id="lblActId" alignment="CENTER_RIGHT" layoutX="616.0" layoutY="487.0" prefHeight="19.0" prefWidth="99.0" textAlignment="RIGHT" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmount" alignment="CENTER_RIGHT" layoutX="931.0" layoutY="709.0" prefHeight="19.0" prefWidth="159.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPrint" layoutX="1211.0" layoutY="872.0" onAction="#btnPrint" prefHeight="30.0" prefWidth="110.0" text="Print Detail">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

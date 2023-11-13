@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.ReportsController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Reports.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="212.0" layoutY="107.0" onAction="#memberOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="274.0" onAction="#accountsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="448.0" onAction="#loansOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="615.0" onAction="#paymentsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="782.0" onAction="#reportsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="1478.0" layoutY="212.0" onAction="#transactionOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <Label fx:id="lblAdminName" layoutX="1593.0" layoutY="502.0" prefHeight="30.0" prefWidth="111.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1671.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1669.0" layoutY="145.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="52.0" text="  " />
+      <TableView fx:id="tblMember" layoutX="613.0" layoutY="251.0" prefHeight="190.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="clmId" prefWidth="69.0" text="Cust ID" />
+            <TableColumn fx:id="clmName" prefWidth="110.0" text="Full Name" />
+            <TableColumn fx:id="clmEmail" prefWidth="148.0" text="Email" />
+            <TableColumn fx:id="clmGender" prefWidth="64.0" text="Gender" />
+            <TableColumn fx:id="clmAddress" prefWidth="125.0" text="Address" />
+            <TableColumn fx:id="clmAge" prefWidth="36.0" text="Age" />
+            <TableColumn fx:id="clmContact" prefWidth="103.0" text="Contact" />
+            <TableColumn fx:id="clmNic" prefWidth="118.0" text="Nic" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnCustomerReport" layoutX="1196.0" layoutY="448.0" onAction="#custReportOnAction" prefHeight="30.0" prefWidth="192.0" style="-fx-background-color: #155cc7;" text="Customer Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblAccount" layoutX="613.0" layoutY="494.0" prefHeight="205.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="clmActId1" prefWidth="130.0" text="Account ID" />
+            <TableColumn fx:id="clmActType1" minWidth="0.0" prefWidth="165.0" text="Account Type" />
+            <TableColumn fx:id="clmMemberId1" prefWidth="194.0" text="Member ID" />
+            <TableColumn fx:id="clmBalance1" prefWidth="121.0" text="Balance" />
+            <TableColumn fx:id="clmDate1" prefWidth="164.0" text="Open Date" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnAccountReport" layoutX="1196.0" layoutY="716.0" onAction="#actReportOnAction" prefHeight="30.0" prefWidth="192.0" style="-fx-background-color: #155cc7;" text="Account Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblLoan" layoutX="613.0" layoutY="761.0" prefHeight="129.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="clmLoanId2" prefWidth="69.0" text="Loan ID" />
+            <TableColumn fx:id="clmLTypeId2" prefWidth="86.0" text="L-Type ID" />
+            <TableColumn fx:id="clmActId2" prefWidth="85.0" text="Account ID" />
+            <TableColumn fx:id="clmPeriod2" prefWidth="52.0" text="Period" />
+            <TableColumn fx:id="clmDate2" prefWidth="65.0" text="Date" />
+            <TableColumn fx:id="clmAmount2" prefWidth="64.0" text="Amount" />
+            <TableColumn fx:id="clmInterest2" prefWidth="88.0" text="Interest" />
+            <TableColumn fx:id="clmTotal2" prefWidth="68.0" text="Total" />
+            <TableColumn fx:id="clmRemaingAmount2" prefWidth="102.0" text="RemaingAmount" />
+            <TableColumn fx:id="clmReason2" prefWidth="95.0" text="Reason" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnLoanReport" layoutX="1196.0" layoutY="897.0" onAction="#loanReportOnAction" prefHeight="30.0" prefWidth="192.0" style="-fx-background-color: #155cc7;" text="Loan Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtAdminCode" alignment="CENTER" layoutX="859.0" layoutY="212.0" onAction="#txtAdminCodeOnAction" prefHeight="25.0" prefWidth="313.0" promptText="Enter Admin Code to Take Print Reports" />
+      <Label fx:id="lblAdminCode" layoutX="1189.0" layoutY="216.0" prefHeight="17.0" prefWidth="172.0" textFill="RED" />
+   </children>
+</AnchorPane>

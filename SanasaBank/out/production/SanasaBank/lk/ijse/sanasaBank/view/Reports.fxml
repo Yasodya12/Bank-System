@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.ReportsController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Reports.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="212.0" layoutY="107.0" onAction="#memberOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="274.0" onAction="#accountsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="448.0" onAction="#loansOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="615.0" onAction="#paymentsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="212.0" layoutY="782.0" onAction="#reportsOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <JFXButton layoutX="1478.0" layoutY="212.0" onAction="#transactionOnAction" prefHeight="167.0" prefWidth="268.0" text="  " />
+      <Label fx:id="lblAdminName" layoutX="1593.0" layoutY="502.0" prefHeight="30.0" prefWidth="111.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1671.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1669.0" layoutY="145.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="52.0" text="  " />
+   </children>
+</AnchorPane>

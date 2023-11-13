@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.RemoveClickedController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Menu%20remove%20clicked.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="213.0" layoutY="108.0" onAction="#memberOnAction" prefHeight="167.0" prefWidth="266.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="275.0" onAction="#accountsOnAction" prefHeight="167.0" prefWidth="266.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="442.0" onAction="#loansOnAction" prefHeight="167.0" prefWidth="266.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="617.0" onAction="#paymentsOnAction" prefHeight="167.0" prefWidth="266.0" text="  " />
+      <JFXButton layoutX="213.0" layoutY="784.0" onAction="#reportsOnAction" prefHeight="167.0" prefWidth="266.0" text="  " />
+      <JFXButton layoutX="601.0" layoutY="108.0" onAction="#addMemberOnAction" prefHeight="82.0" prefWidth="163.0" text="  " />
+      <JFXButton layoutX="764.0" layoutY="108.0" onAction="#searchMemberOnAction" prefHeight="82.0" prefWidth="163.0" text="  " />
+      <JFXButton layoutX="927.0" layoutY="108.0" onAction="#removeMemberOnAction" prefHeight="82.0" prefWidth="163.0" text="  " />
+      <JFXButton layoutX="1077.0" layoutY="108.0" onAction="#viewMemberOnAction" prefHeight="82.0" prefWidth="163.0" text="  " />
+      <JFXButton layoutX="1481.0" layoutY="212.0" onAction="#transactionOnAction" prefHeight="167.0" prefWidth="266.0" text="  " />
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1671.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1671.0" layoutY="149.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="47.0" text=" " />
+      <Label fx:id="lblAdminName" layoutX="1587.0" layoutY="494.0" prefHeight="17.0" prefWidth="88.0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblLoan" layoutX="619.0" layoutY="755.0" prefHeight="145.0" prefWidth="779.0">
+         <columns>
+            <TableColumn fx:id="clmLoanId" prefWidth="69.0" text="Loan ID" />
+            <TableColumn fx:id="clmLTypeId" prefWidth="86.0" text="L-Type ID" />
+            <TableColumn fx:id="clmActId" prefWidth="85.0" text="Account ID" />
+            <TableColumn fx:id="clmPeriod" prefWidth="52.0" text="Period" />
+            <TableColumn fx:id="clmDate" prefWidth="65.0" text="Date" />
+            <TableColumn fx:id="clmAmount" prefWidth="64.0" text="Amount" />
+            <TableColumn fx:id="clmInterest" prefWidth="99.0" text="Interest" />
+            <TableColumn fx:id="clmTotal" prefWidth="66.0" text="Total" />
+            <TableColumn fx:id="clmRemaingAmount" prefWidth="127.0" text="RemaingAmount" />
+            <TableColumn fx:id="clmReason" prefWidth="65.0" text="Reason" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblAccount" layoutX="625.0" layoutY="514.0" prefHeight="205.0" prefWidth="771.0">
+         <columns>
+            <TableColumn fx:id="clmActId1" prefWidth="130.0" text="Account ID" />
+            <TableColumn fx:id="clmActType" minWidth="0.0" prefWidth="155.0" text="Account Type" />
+            <TableColumn fx:id="clmMemberId" prefWidth="170.0" text="Member ID" />
+            <TableColumn fx:id="clmBalance" prefWidth="165.0" text="Balance" />
+            <TableColumn fx:id="clmDate1" prefWidth="150.0" text="Open Date" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbMemId" layoutX="655.0" layoutY="225.0" onAction="#cmbMemIdOnAction" prefHeight="25.0" prefWidth="183.0" promptText="Member ID" />
+      <JFXComboBox fx:id="cmbMemName" layoutX="1057.0" layoutY="225.0" onAction="#cmbMemNameOnAction" prefHeight="25.0" prefWidth="183.0" promptText="Member Name" />
+      <TableView fx:id="tblMember" layoutX="623.0" layoutY="296.0" prefHeight="194.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="clmId" prefWidth="69.0" text="Cust ID" />
+            <TableColumn fx:id="clmName" prefWidth="110.0" text="Full Name" />
+            <TableColumn fx:id="clmEmail" prefWidth="148.0" text="Email" />
+            <TableColumn fx:id="clmGender" prefWidth="64.0" text="Gender" />
+            <TableColumn fx:id="clmAddress" prefWidth="125.0" text="Address" />
+            <TableColumn fx:id="clmAge" prefWidth="36.0" text="Age" />
+            <TableColumn fx:id="clmContact" prefWidth="103.0" text="Contact" />
+            <TableColumn fx:id="clmNic" prefWidth="118.0" text="Nic" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

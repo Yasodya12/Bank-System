@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.OpenAccountController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Open%20Account.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="215.0" layoutY="107.0" onAction="#memberOnAction" prefHeight="166.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="273.0" onAction="#accountOnAction" prefHeight="166.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="448.0" onAction="#loanOnAction" prefHeight="166.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="614.0" onAction="#paymentsOnAction" prefHeight="166.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="787.0" onAction="#reportsOnAction" prefHeight="166.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="583.0" layoutY="107.0" onAction="#openAccountOnAction" prefHeight="80.0" prefWidth="162.0" text="  " />
+      <JFXButton layoutX="745.0" layoutY="107.0" onAction="#searchAccountOnAction" prefHeight="80.0" prefWidth="162.0" text="  " />
+      <JFXButton layoutX="907.0" layoutY="107.0" onAction="#viewAcountonAction" prefHeight="80.0" prefWidth="162.0" text="  " />
+      <JFXButton layoutX="1480.0" layoutY="211.0" onAction="#transactionOnAction" prefHeight="172.0" prefWidth="271.0" text="  " />
+      <Label fx:id="lblAdminName" layoutX="1587.0" layoutY="494.0" prefHeight="30.0" prefWidth="119.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1671.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1669.0" layoutY="150.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="52.0" text="  " />
+      <Label layoutX="602.0" layoutY="204.0" prefHeight="30.0" prefWidth="216.0" text="Member Information" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="602.0" layoutY="256.0" prefHeight="27.0" prefWidth="195.0" text="Search By Member ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="977.0" layoutY="256.0" prefHeight="27.0" prefWidth="233.0" text="Search By Member Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchId" layoutX="797.0" layoutY="257.0" onAction="#EnterOnAction2" onInputMethodTextChanged="#EnterOnAction" />
+      <TextField fx:id="txtSearchName" layoutX="1194.0" layoutY="257.0" onAction="#enterOnActionName" />
+      <TableView fx:id="tblMember" layoutX="622.0" layoutY="309.0" prefHeight="127.0" prefWidth="764.0">
+         <columns>
+            <TableColumn fx:id="clmId" prefWidth="69.0" text="Cust ID" />
+            <TableColumn fx:id="clmName" prefWidth="110.0" text="Full Name" />
+            <TableColumn fx:id="clmGender" prefWidth="64.0" text="Gender" />
+            <TableColumn fx:id="clmAge" prefWidth="36.0" text="Age" />
+            <TableColumn fx:id="clmContact" prefWidth="103.0" text="Contact" />
+            <TableColumn fx:id="clmNic" prefWidth="118.0" text="Nic" />
+            <TableColumn fx:id="clmEmail" prefWidth="148.0" text="Email" />
+            <TableColumn fx:id="clmAddress" prefWidth="125.0" text="Address" />
+         </columns>
+      </TableView>
+      <Label layoutX="622.0" layoutY="467.0" prefHeight="27.0" prefWidth="195.0" text="Member ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="876.0" layoutY="466.0" prefHeight="27.0" prefWidth="195.0" text="Member Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="622.0" layoutY="568.0" prefHeight="30.0" prefWidth="216.0" text="Account Detail" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="622.0" layoutY="614.0" prefHeight="27.0" prefWidth="195.0" text="Account ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtActId" layoutX="613.0" layoutY="659.0" />
+      <Label layoutX="1178.0" layoutY="467.0" prefHeight="27.0" prefWidth="195.0" text="Member NIC">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="880.0" layoutY="606.0" prefHeight="27.0" prefWidth="195.0" text="Date">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" layoutX="880.0" layoutY="651.0" />
+      <Label layoutX="622.0" layoutY="719.0" prefHeight="27.0" prefWidth="195.0" text="Account Type">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="872.0" layoutY="719.0" prefHeight="27.0" prefWidth="195.0" text="Deposite Money ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDepositeMoney" layoutX="872.0" layoutY="788.0" />
+      <Label layoutX="1158.0" layoutY="719.0" prefHeight="27.0" prefWidth="246.0" text="Deposite Money (by words)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMoneyName" layoutX="1148.0" layoutY="788.0" prefHeight="25.0" prefWidth="255.0" />
+      <JFXComboBox fx:id="cmbActType" layoutX="622.0" layoutY="788.0" prefHeight="25.0" prefWidth="195.0" promptText="Select Account Type" />
+      <JFXButton fx:id="btnAct" layoutX="1152.0" layoutY="877.0" onAction="#btnCreateAct" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: #155cc7;" text="Create Account" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblId" layoutX="793.0" layoutY="283.0" prefHeight="17.0" prefWidth="159.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemName" layoutX="1189.0" layoutY="283.0" prefHeight="17.0" prefWidth="159.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAddMemId" layoutX="873.0" layoutY="831.0" prefHeight="17.0" prefWidth="159.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemId" layoutX="626.0" layoutY="509.0" prefHeight="17.0" prefWidth="105.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemName2" layoutX="880.0" layoutY="509.0" prefHeight="25.0" prefWidth="149.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemNic" layoutX="1178.0" layoutY="509.0" prefHeight="25.0" prefWidth="149.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblActTypeLable" layoutX="608.0" layoutY="831.0" prefHeight="17.0" prefWidth="159.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

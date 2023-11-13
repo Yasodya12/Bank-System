@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.SearchedClickedController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Menu%20add%20searchclicked.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="224.0" layoutY="117.0" onAction="#memberOnAction" prefHeight="164.0" prefWidth="267.0" text="  " />
+      <JFXButton layoutX="224.0" layoutY="288.0" onAction="#accountsOnAction" prefHeight="164.0" prefWidth="267.0" text="  " />
+      <JFXButton layoutX="224.0" layoutY="452.0" onAction="#loansOnAction" prefHeight="174.0" prefWidth="267.0" text="  " />
+      <JFXButton layoutX="224.0" layoutY="626.0" onAction="#paymentsOnAction" prefHeight="164.0" prefWidth="267.0" text=" " />
+      <JFXButton layoutX="224.0" layoutY="798.0" onAction="#reportsOnAction" prefHeight="164.0" prefWidth="267.0" text="  " />
+      <JFXButton layoutX="608.0" layoutY="105.0" onAction="#addMemberOnAction" prefHeight="81.0" prefWidth="157.0" text="  " />
+      <JFXButton layoutX="771.0" layoutY="117.0" onAction="#searchEdOnAction" prefHeight="81.0" prefWidth="163.0" text="  " />
+      <JFXButton layoutX="934.0" layoutY="117.0" onAction="#removeOnAction" prefHeight="81.0" prefWidth="157.0" text="  " />
+      <JFXButton layoutX="1091.0" layoutY="117.0" onAction="#viewAllOnAction" prefHeight="81.0" prefWidth="163.0" text="  " />
+      <JFXButton layoutX="1490.0" layoutY="225.0" onAction="#transactionOnAction" prefHeight="164.0" prefWidth="267.0" text="  " />
+      <Label fx:id="lblAdminName" layoutX="1596.0" layoutY="512.0" prefHeight="17.0" prefWidth="118.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="homeOnAction" fitHeight="47.0" fitWidth="47.0" layoutX="1616.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1671.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1671.0" layoutY="147.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="52.0" text="  " />
+      <Label layoutX="608.0" layoutY="268.0" prefHeight="23.0" prefWidth="99.0" text="Member ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchId" layoutX="608.0" layoutY="307.0" onKeyTyped="#MemIdSearchOnAction" prefHeight="25.0" prefWidth="99.0" />
+      <Label layoutX="774.0" layoutY="223.0" prefHeight="30.0" prefWidth="216.0" text="Member Information" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="774.0" layoutY="268.0" prefHeight="27.0" prefWidth="179.0" text="Member Full Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFistName" layoutX="774.0" layoutY="307.0" onKeyTyped="#firstNameTypedOnAction" prefHeight="25.0" prefWidth="523.0" />
+      <Label layoutX="774.0" layoutY="379.0" prefHeight="27.0" prefWidth="216.0" text="Member Email Address">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLastName" layoutX="774.0" layoutY="406.0" prefHeight="25.0" prefWidth="523.0" />
+      <Label layoutX="770.0" layoutY="469.0" prefHeight="27.0" prefWidth="179.0" text="NIC">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNic" layoutX="770.0" layoutY="496.0" prefHeight="25.0" prefWidth="202.0" />
+      <Label layoutX="1032.0" layoutY="470.0" prefHeight="27.0" prefWidth="179.0" text="Contact ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContact" layoutX="1032.0" layoutY="497.0" prefHeight="25.0" prefWidth="202.0" />
+      <TextArea fx:id="txtAddress" layoutX="770.0" layoutY="603.0" prefHeight="118.0" prefWidth="289.0" />
+      <Label layoutX="770.0" layoutY="559.0" prefHeight="27.0" prefWidth="179.0" text="Address">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1149.0" layoutY="755.0" prefHeight="27.0" prefWidth="179.0" text="Age">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAge" layoutX="1149.0" layoutY="791.0" prefHeight="25.0" prefWidth="68.0" />
+      <JFXRadioButton fx:id="rbMale" layoutX="770.0" layoutY="790.0" text="Male">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="group2" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rbFemail" layoutX="898.0" layoutY="790.0" text="Femail" toggleGroup="$group2">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <selectedColor>
+            <Color green="0.6973684430122375" blue="0.3486842215061188" />
+         </selectedColor>
+      </JFXRadioButton>
+      <Label layoutX="774.0" layoutY="755.0" prefHeight="27.0" prefWidth="179.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnUpdate" layoutX="1147.0" layoutY="843.0" onAction="#updateOnAction" prefHeight="36.0" prefWidth="137.0" style="-fx-background-color: #155cc7;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtSearchName" layoutX="601.0" layoutY="406.0" onKeyTyped="#MemNameSearchOnAction" prefHeight="25.0" prefWidth="99.0" />
+      <Label layoutX="601.0" layoutY="366.0" prefHeight="27.0" prefWidth="130.0" text="Member Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="607.0" layoutY="223.0" prefHeight="30.0" prefWidth="118.0" text="Search By" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSearch" layoutX="972.0" layoutY="843.0" onAction="#searchOnAction" prefHeight="36.0" prefWidth="137.0" style="-fx-background-color: #155cc7;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblFullName" layoutX="1126.0" layoutY="332.0" prefHeight="17.0" prefWidth="172.0" textFill="RED" />
+      <Label fx:id="lblEmail" layoutX="1125.0" layoutY="431.0" prefHeight="17.0" prefWidth="172.0" textFill="RED" />
+      <Label fx:id="lblNic" layoutX="771.0" layoutY="519.0" prefHeight="17.0" prefWidth="172.0" textFill="RED" />
+      <Label fx:id="lblContact" layoutX="1034.0" layoutY="519.0" prefHeight="17.0" prefWidth="172.0" textFill="RED" />
+      <Label fx:id="lblAge" layoutX="1148.0" layoutY="816.0" prefHeight="17.0" prefWidth="172.0" textFill="RED" />
+      <Label fx:id="lblAddress" layoutX="771.0" layoutY="721.0" prefHeight="17.0" prefWidth="172.0" textFill="RED" />
+   </children>
+</AnchorPane>

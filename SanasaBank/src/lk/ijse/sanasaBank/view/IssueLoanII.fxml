@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sanasaBank.controller.IssueLoanIIController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Issue%20Loan.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="215.0" layoutY="107.0" onAction="#memberOnAction" prefHeight="168.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="275.0" onAction="#accountOnAction" prefHeight="168.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="443.0" onAction="#loanOnAction" prefHeight="168.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="611.0" onAction="#paymentsOnAction" prefHeight="168.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="215.0" layoutY="786.0" onAction="#reportsOnAction" prefHeight="168.0" prefWidth="265.0" text="  " />
+      <JFXButton layoutX="587.0" layoutY="107.0" onAction="#issueLoanOnAction" prefHeight="78.0" prefWidth="159.0" text="  " />
+      <JFXButton layoutX="745.0" layoutY="109.0" onAction="#searchLoanOnAction" prefHeight="78.0" prefWidth="159.0" text="  " />
+      <JFXButton layoutX="1481.0" layoutY="214.0" onAction="#transactionOnAction" prefHeight="168.0" prefWidth="265.0" text="  " />
+      <Label layoutX="1586.0" layoutY="496.0" prefHeight="31.0" prefWidth="125.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1671.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-house-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1669.0" layoutY="150.0" onAction="#homeOnAction" prefHeight="47.0" prefWidth="52.0" text=" " />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0ed8b3" height="179.0" layoutX="1060.0" layoutY="680.0" stroke="BLACK" strokeType="INSIDE" width="341.0" />
+      <Label layoutX="775.0" layoutY="437.0" prefHeight="30.0" prefWidth="125.0" text="Loan Detail" textFill="#155cc7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="607.0" layoutY="479.0" text="Loan ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtlLoanId" layoutX="607.0" layoutY="515.0" prefHeight="25.0" prefWidth="86.0" />
+      <JFXComboBox fx:id="clmLoanType" layoutX="778.0" layoutY="515.0" onAction="#loanTypeOnAction" prefHeight="25.0" prefWidth="159.0" promptText="Select From Here" />
+      <Label layoutX="774.0" layoutY="479.0" prefHeight="27.0" prefWidth="104.0" text="Loan Type">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="clmLoanType1" layoutX="1130.0" layoutY="521.0" prefHeight="25.0" prefWidth="153.0" promptText="Select From Here" />
+      <Label layoutX="1126.0" layoutY="485.0" prefHeight="27.0" prefWidth="171.0" text="Settlement Period">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="774.0" layoutY="568.0" text="Loan Amount">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="774.0" layoutY="610.0" onAction="#setDetailOnAction" prefHeight="25.0" prefWidth="153.0" promptText="Min-100000 Max-5000000" />
+      <Label layoutX="1130.0" layoutY="574.0" text="Date">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" layoutX="1130.0" layoutY="610.0" prefHeight="25.0" prefWidth="153.0" />
+      <Label layoutX="774.0" layoutY="711.0" text="Reason">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="conform" layoutX="1177.0" layoutY="882.0" onAction="#conformInAction" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: #155cc7;" text="Conform" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1069.0" layoutY="695.0" prefHeight="27.0" prefWidth="125.0" text="Interest      :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1068.0" layoutY="746.0" prefHeight="27.0" prefWidth="165.0" text="Total Payment  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1068.0" layoutY="796.0" prefHeight="27.0" prefWidth="184.0" text="Monthly Instalment  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInterest" layoutX="1207.0" layoutY="698.0" prefHeight="27.0" prefWidth="125.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTot" layoutX="1221.0" layoutY="746.0" prefHeight="27.0" prefWidth="125.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMonthlyInst" layoutX="1252.0" layoutY="796.0" prefHeight="27.0" prefWidth="125.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1491.0" layoutY="224.0" onAction="#transactionOnAction" prefHeight="168.0" prefWidth="265.0" text="  " />
+      <TextArea fx:id="txtReason" layoutX="774.0" layoutY="749.0" prefHeight="121.0" prefWidth="200.0" />
+      <JFXButton layoutX="910.0" layoutY="107.0" onAction="#ViewAllLoanOnACtion" prefHeight="78.0" prefWidth="159.0" text="  " />
+      <TableView fx:id="tblLoan" layoutX="595.0" layoutY="214.0" prefHeight="137.0" prefWidth="816.0">
+         <columns>
+            <TableColumn fx:id="clmLoanId" prefWidth="69.0" text="Loan ID" />
+            <TableColumn fx:id="clmLTypeId" prefWidth="86.0" text="L-Type ID" />
+            <TableColumn fx:id="clmActId" prefWidth="85.0" text="Account ID" />
+            <TableColumn fx:id="clmPeriod" prefWidth="52.0" text="Period" />
+            <TableColumn fx:id="clmDate" prefWidth="65.0" text="Date" />
+            <TableColumn fx:id="clmAmount" prefWidth="64.0" text="Amount" />
+            <TableColumn fx:id="clmInterest" prefWidth="99.0" text="Interest" />
+            <TableColumn fx:id="clmTotal" prefWidth="66.0" text="Total" />
+            <TableColumn fx:id="clmRemaingAmount" prefWidth="127.0" text="RemaingAmount" />
+            <TableColumn fx:id="clmReason" prefWidth="102.0" text="Reason" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblLoanType" alignment="CENTER_RIGHT" layoutX="770.0" layoutY="546.0" prefHeight="19.0" prefWidth="184.0" textAlignment="RIGHT" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSettlePeriod" alignment="CENTER_RIGHT" layoutX="1129.0" layoutY="551.0" prefHeight="19.0" prefWidth="184.0" textAlignment="RIGHT" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmount" alignment="CENTER_RIGHT" layoutX="770.0" layoutY="641.0" prefHeight="19.0" prefWidth="229.0" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblReason" alignment="CENTER_RIGHT" layoutX="775.0" layoutY="882.0" prefHeight="19.0" prefWidth="184.0" textAlignment="RIGHT" textFill="#c91010">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

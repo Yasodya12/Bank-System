@@ -1,0 +1,109 @@
+Create database if not existS SanasaBank;
+
+
+Use SanasaBank;
+
+Create table if not exists Customer(
+	CusID VARCHAR(45),
+	firstName VARCHAR(45),
+	email VARCHAR(80),
+	gender ENUM ('Male','Female') DEFAULT 'Male',
+	address VARCHAR(45),
+	age INT,
+	contact VARCHAR(15),
+	nic VARCHAR(45),
+	CONSTRAINT PRIMARY KEY(CusID)
+);
+=========================================================
+Create table if not exists Account(
+	ActID VARCHAR(10),
+	name VARCHAR(45),
+	CusID VARCHAR(10),
+	Balance DOUBLE,
+	date VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(ActID),
+ 	CONSTRAINT FOREIGN KEY (CusID) REFERENCES Customer(CusID),
+	CONSTRAINT FOREIGN KEY (name) REFERENCES ActType(name)
+);
+========================================================================
+Create table if not exists ActType(
+	name VARCHAR(45),
+	ageLimit VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(name)
+);
+===============================================================================
+Create table if not exists Transaction(
+	TID VARCHAR(10),
+	ActID VARCHAR(10),
+	Amount Double,
+	TransType VARCHAR(20),
+	CONSTRAINT PRIMARY KEY(TID),
+	CONSTRAINT FOREIGN KEY (ActId) REFERENCES Account(ActId)
+);
+===============================================================================
+Create table if not exists Loan(
+	LID VARCHAR(10),
+	LTypeID VARCHAR(10),
+	ActID VARCHAR(10),
+	Amount Double,
+	Total Double,
+	RemaingAmount Double,
+	CONSTRAINT PRIMARY KEY(LID),
+	CONSTRAINT FOREIGN KEY (ActId) REFERENCES Account(ActId),
+	CONSTRAINT FOREIGN KEY (LTypeID) REFERENCES LoanType(LoanTypeID)
+);
+===================================================================================
+Create table if not exists LoanType(
+	LoanTypeID VARCHAR(10),
+	LoanTypename VARCHAR(45),
+	Purpose VARCHAR(20),
+	Interest Double,
+	CONSTRAINT PRIMARY KEY(LoanTypeID)
+);
+=================================================================================
+Create table if not exists InstalmentPayment(
+	PayID VARCHAR(10),
+	LID VARCHAR(10),
+	Amount Double,
+	CONSTRAINT PRIMARY KEY(PayID),
+	CONSTRAINT FOREIGN KEY (LID) REFERENCES Loan(LID)
+);
+=====================================================================================
+CREATE TABLE IF NOT EXISTS cheque(
+	chequeId INT PRIMARY KEY AUTO_INCREMENT,
+	purpose ENUM ('Deposite','Loan Settle') DEFAULT 'Deposite',
+	amount Double ,
+	date VARCHAR(45)
+	 
+);
+================================================================================
+Create table if not exists Gurdian(
+	name VARCHAR(45),
+	NetWorth Double,
+	CONSTRAINT PRIMARY KEY(name)
+);
+================================================================================================
+Create table if not exists LoanGurdian(
+	name VARCHAR(45),
+	LID VARCHAR(10),
+	CONSTRAINT PRIMARY KEY(name,LID),
+	CONSTRAINT FOREIGN KEY (LID) REFERENCES Loan(LID),
+	CONSTRAINT FOREIGN KEY (name) REFERENCES Gurdian(name)
+);
+=============================================================
+Create table if not exists admin(
+	username VARCHAR(45),
+	password VARCHAR(45),
+	CONSTRAINT PRIMARY KEY(username)
+);
+
+insert into admin values ('rishika', '1234');
+insert into admin values ('rishika', '555');
+SELECT * FROM admin WHERE username = 'rishika';
+
+
+
+
+Insert into loantype values('LT001','Personal Loan','Personal reason',10);
+
+Insert into gurdian values('G002','Sunil',2000000,'2942212','Colombo','30');
